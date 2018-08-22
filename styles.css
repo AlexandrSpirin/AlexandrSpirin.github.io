@@ -2,6 +2,11 @@
 {
 	margin: 0;
 	padding: 0;
+	-webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
 }
 
 html 
@@ -13,7 +18,6 @@ html
 body 
 {
 	min-width: 1200px;
-	min-height: 800px;
     height: 100%;
     width: 100%;
     background: #4743ba;
@@ -35,13 +39,18 @@ h1
 	color:#fff;
 }
 
-#wrapper
+li 
+{
+    list-style-type: none;
+}
+
+.wrapper
 {
 	width: 100%;
 	height:100%;
 }
 
-#header 
+.header 
 {
 	background: #000;
 	width: 100%;
@@ -49,69 +58,66 @@ h1
 	display: flex;
 }
 
-#graphic-logo
-{
-	height: 100%;
-	width:100%;
-	object-fit: contain;
-}
-
-#content
+.content
 {
 	width: 100%;
 	height: 100%;
 	bottom: 80px;
-	padding-bottom: 120px;
+	padding-bottom: 80px;
 	padding-top: 80px;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 
-#footer{
+.footer{
 	position: absolute;
 	background:#1f1e38;
 	bottom: 0;
 	width: 100%;
-	height:120px;
-	display: flex;
+	height:80px;
 }
 
-#middle
+.octopus
 {
-	top:50%;
+	top: 50%;
 	left: 50%;
-	height: 0;
-	width: 0;
+	width: 90%;
+	min-width: 1100px;
+	transform: translate(-50%, -50%);
 }
 
-#octopus
+.octopus-tentacles
 {
-	top:-256px;
-	left: -550px;
-	height: 512px;
-	width: 1100px;
+	position: relative;
+	top: 0;
+	height: 100%;
+	min-width:844px;
+	width: 80%;
 }
 
-#octopus-head
+.octopus-head
 {
-	top:0;
-	left:844px;
-	width: 256px;
-  	height: 512px;
+	position: absolute;
+	top: 0;
+	left:80%;
+	width: 20%;
+  	height: 100%;
   	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
 	background: #e89076;
 }
 
-#octopus-eye
+.octopus-eye
 {
-	height: 10%;
-	width: 20%;
+	height: 64px;
+	width: 64px;
 	top:20%;
 	right: -40%;
 	border-radius: 50%;
 	background: #efc6ba;
 }
 
-#octopus-eye-apple
+.octopus-eye-apple
 {
 	height: 40%;
 	width: 40%;
@@ -124,13 +130,13 @@ h1
 .octopus-tentacle-text
 {
 	position: relative;
-	right: 0;
+	left: 0;
 	background:none;
 	border-color: #6a65ed;
 	outline-color: #dd91ff;
-	width: 218px;
+	width: 28%;
 	height: 28px;
-	bottom: 37px;
+	bottom: 9px;
 	text-align: right;
 	font-family: "Raleway", sans-serif;
 	font-size: 20px;
@@ -140,8 +146,7 @@ h1
 .octopus-tentacle
 {
 	height: 32px;
-	width: 844px;
-	bottom: 520px; 
+	width: 100%;
 	margin-top: 8px;
 }
 
@@ -149,8 +154,7 @@ h1
 {
 	-webkit-appearance:none;
 	position: relative;
-	left: 224px;
-	width: 620px;
+	width: 70%;
   	height: 32px;
   	outline: none;
   	border-top-right-radius: 32px;
@@ -158,6 +162,7 @@ h1
 	background:#6a65ed;
 	overflow: hidden;
 	transform: scale(-1, 1);
+	left: 1.54%;
 }
 
 .octopus-tentacle-range::-webkit-slider-thumb
@@ -228,3 +233,34 @@ h1
 }
 
 .octopus-tentacle-range::-ms-thumb:hover, .octopus-tentacle-range::-ms-thumb:active{border: 2px solid #ffdfd6}
+
+.tentacle-max-tips
+{
+	position: absolute;
+	left: 10%;
+	width: 35%;
+	height: 32px;
+	top: 50%;
+	transform: translate(0, -50%);
+	border-radius: 32px;
+	background:#6a65ed;
+	text-align: center;
+	font-family: "Raleway", sans-serif;
+	font-size: 24px;
+}
+
+.tentacle-current-tips
+{
+	position: absolute;
+	left: 50%;
+	width: 35%;
+	height: 32px;
+	top: 50%;
+	transform: translate(0, -50%);
+	border-radius: 32px;
+	background:#e89076;
+	text-align: center;
+	font-family: "Raleway", sans-serif;
+	font-size: 24px;
+}
+
