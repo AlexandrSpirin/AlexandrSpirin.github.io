@@ -17,10 +17,16 @@ html
 
 body 
 {
+	position: absolute;
+	top:0;
 	min-width: 1200px;
     height: 100%;
     width: 100%;
-    background: #4743ba;
+    background: #ffffff;
+    color:#000000;
+    font-family: "Arial", sans-serif;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff;
 }
 
 div
@@ -30,13 +36,10 @@ div
 
 h1
 {
-	display: inline-block;
 	margin-top: 8px;
 	width: 100%;
 	text-align: center;
-	font-family: "Raleway", sans-serif;
 	font-size: 50px;
-	color:#fff;
 }
 
 li 
@@ -44,50 +47,39 @@ li
     list-style-type: none;
 }
 
-.wrapper
+.content
 {
+	position: absolute;
+	height: 100%;
 	width: 100%;
-	height:100%;
+	min-height: 880px;
 }
 
 .header 
 {
-	background: #000;
 	width: 100%;
 	height:106px;
-	display: flex;
-}
-
-.content
-{
-	height: 100%;
-	bottom: 106px;
-	padding-top: 106px;
-	min-height: 700px;
-	box-sizing: border-box; 
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box;
+	text-align: center;
 }
 
 .octopus
 {
 	width: 90%;
 	min-width: 1100px;
-	top: 50%; 
-	left: 50%; 
-	transform: translate(-50%, -50%); 
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
 }
 
-.octopus-tentacles
+.octopus__tentacles
 {
 	position: relative;
 	top: 0;
 	height: 100%;
-	min-width:844px;
 	width: 80%;
 }
 
-.octopus-head
+.octopus__head
 {
 	position: absolute;
 	top: 0;
@@ -95,141 +87,281 @@ li
 	width: 20%;
   	height: 100%;
   	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-	background: #e89076;
+	background: #000;
 }
 
-.octopus-eye
+.octopus__head__eye
 {
-	height: 64px;
-	width: 64px;
-	top:20%;
-	right: -40%;
+	height: 88px;
+	width: 88px;
+	top:25%;
+	left:45%;
 	border-radius: 50%;
-	background: #efc6ba;
+	background: #fff;
 }
 
-.octopus-eye-apple
+.octopus__head__eye__apple
 {
-	height: 40%;
-	width: 40%;
-	top:22%;
-	left: 44%;
+	height: 45%;
+	width: 45%;
+	top:25%;
+	left: 45%;
 	border-radius: 50%;
-	background: #382520;
+	background: #000;
+	animation: look 8s infinite alternate-reverse;
 }
 
-.octopus-tentacle-text
+@keyframes look
 {
-	position: relative;
-	left: 0;
-	background:none;
-	border-color: #6a65ed;
-	outline-color: #dd91ff;
-	width: 400px;
-	height: 28px;
-	bottom: 0;
-	text-align: right;
-	font-family: "Raleway", sans-serif;
-	font-size: 20px;
-	color:#ffdfd6;
+	0% {top:25%;left: 45%;}
+	10% {top:20%;left: 30%;}
+	25% {top:40%;left: 15%;}
+	40% {top:30%;left: 10%;}
+	50% {top:45%;left: 30%;}
+	65% {top:50%;left: 45%;}
+	90% {top:40%;left: 50%;}
+	100% {top:30%;left: 45%;}
 }
 
-.octopus-tentacle
+.octopus__tentacle_if-need-more
 {
 	height: 32px;
 	width: 100%;
 	margin-top: 8px;
+	text-align: right;
+	background: #9b9b9b;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
 }
 
-.margin-left-for-tentacle-range
+.octopus__tentacle_if-need-less
 {
-	margin-left: 408px;
-	bottom: 32px;
-	height: 100%;
-}
-
-.octopus-tentacle-range
-{
-	-webkit-appearance:none;
-	position: relative;
+	height: 32px;
 	width: 100%;
-  	height: 100%;
-  	outline: none;
-  	border-top-right-radius: 32px;
-  	border-bottom-right-radius: 32px;
-	background:#6a65ed;
-	overflow: hidden;
-	transform: scale(-1, 1);
+	margin-top: 8px;
+	text-align: right;
+	background: #000000;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
 }
 
-.octopus-tentacle-range::-webkit-slider-thumb
+.octopus__tentacle_programming::before
 {
-    -webkit-appearance:none;
-    background: #f4baa8;
-    height: 32px;
-	width: 32px;
-	border-radius: 32px;
-	cursor: pointer;
-	box-shadow: -10016px 0 0 10000px #e89076;
+	position: absolute;
+	content: "Программирование";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 65%;
+	background: #000000;
 }
 
-.octopus-tentacle-range::-webkit-slider-thumb:hover, .octopus-tentacle-range::-webkit-slider-thumb:active{border: 2px solid #ffdfd6}
-
-.octopus-tentacle-range::-moz-range-track
+.octopus__tentacle_english::before
 {
-	-moz-appearance:none;
-	position: relative;
-	width: 100%;
-  	height: 100%;
-  	outline: none;
-  	border-top-right-radius: 32px;
-  	border-bottom-right-radius: 32px;
-	background:#6a65ed;
-	overflow: hidden;
-	transform: scale(-1, 1);
+	position: absolute;
+	content: "Английский язык";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 25%;
+	background: #000000;
 }
 
-.octopus-tentacle-range::-moz-range-thumb
+.octopus__tentacle_responsibility::before
 {
-    -moz-appearance:none;
-    background: #f4baa8;
-    height: 32px;
-	width: 32px;
-	border-radius: 32px;
-	cursor: pointer;
-	box-shadow: -10016px 0 0 10000px #e89076;
+	position: absolute;
+	content: "Ответственность";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 70%;
+	background: #000000;
 }
 
-.octopus-tentacle-range::-moz-range-thumb:hover, .octopus-tentacle-range::-moz-range-thumb:active{border: 2px solid #ffdfd6}
-
-.octopus-tentacle-range::-ms-track
+.octopus__tentacle_perseverance::before
 {
-	-moz-appearance:none;
-	position: relative;
-	width: 100%;
-  	height: 100%;
-  	outline: none;
-  	border-top-right-radius: 32px;
-  	border-bottom-right-radius: 32px;
-	background:#6a65ed;
-	overflow: hidden;
-	transform: scale(-1, 1);
+	position: absolute;
+	content: "Усидчивость";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 90%;
+	background: #000000;
 }
 
-.octopus-tentacle-range::-ms-thumb
+.octopus__tentacle_learnability::before
 {
-    -moz-appearance:none;
-    background: #f4baa8;
-    height: 32px;
-	width: 32px;
-	border-radius: 32px;
-	cursor: pointer;
-	box-shadow: -10016px 0 0 10000px #e89076;
+	position: absolute;
+	content: "Обучаемость";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 85%;
+	background: #000000;
 }
 
-.octopus-tentacle-range::-ms-thumb:hover, .octopus-tentacle-range::-ms-thumb:active{border: 2px solid #ffdfd6}
+.octopus__tentacle_task::before
+{
+	position: absolute;
+	content: "Решение задач";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 80%;
+	background: #000000;
+}
 
-.tentacle-max-tips
+.octopus__tentacle_enterprise::before
+{
+	position: absolute;
+	content: "Предприимчивость";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 35%;
+	background: #000000;
+}
+
+.octopus__tentacle_stressresistance::before
+{
+	position: absolute;
+	content: "Стрессоустойчивость";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 60%;
+	background: #000000;
+}
+
+.octopus__tentacle_courage::before
+{
+	position: absolute;
+	content: "Смелость";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 75%;
+	background: #000000;
+}
+
+.octopus__tentacle_organization::before
+{
+	position: absolute;
+	content: "Организованность";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 70%;
+	background: #000000;
+}
+
+.octopus__tentacle_curiosity::before
+{
+	position: absolute;
+	content: "Любопытство";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 95%;
+	background: #000000;
+}
+
+.octopus__tentacle_design::before
+{
+	position: absolute;
+	content: "Дизайн";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 50%;
+	background: #000000;
+}
+
+.octopus__tentacle_graphiceditors::before
+{
+	position: absolute;
+	content: "Владение графическими редакторами";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 60%;
+	background: #000000;
+}
+
+.octopus__tentacle_sociability::before
+{
+	position: absolute;
+	content: "Коммуникабельность";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 65%;
+	background: #000000;
+}
+
+.octopus__tentacle_laziness::before
+{
+	position: absolute;
+	content: "Лень";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 55%;
+	background-image: linear-gradient(to right, #9b9b9b, #000000);
+}
+
+.octopus__tentacle_greed::before
+{
+	position: absolute;
+	content: "Жадность";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 40%;
+	background-image: linear-gradient(to right, #9b9b9b, #000000);
+}
+
+.octopus__tentacle_new-need-more::before
+{
+	position: absolute;
+	content: "";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	height: 32px;
+	width: 5%;
+	background: #000000;
+}
+
+.octopus__tentacle_new-need-less::before
+{
+	position: absolute;
+	content: "";
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+  	background-image: linear-gradient(to right, #9b9b9b, #000000);
+  	right: 0;
+	height: 32px;
+	width: 5%;
+}
+
+.tips_tentacle-need
 {
 	position: absolute;
 	left: 50%;
@@ -238,13 +370,10 @@ li
 	height: 32px;
 	top: 66px;
 	border-radius: 32px;
-	background:#6a65ed;
-	text-align: center;
-	font-family: "Raleway", sans-serif;
-	font-size: 24px;
+	background:#9b9b9b;
 }
 
-.tentacle-current-tips
+.tips_tentacle-current
 {
 	position: absolute;
 	right: 50%;
@@ -253,9 +382,6 @@ li
 	height: 32px;
 	top: 66px;
 	border-radius: 32px;
-	background:#e89076;
-	text-align: center;
-	font-family: "Raleway", sans-serif;
-	font-size: 24px;
+	background:#000000;
 }
 
