@@ -12,16 +12,17 @@
 html 
 {
     height: 100%;
-    width: 100%;
+    width: 100%;  
 }
 
 body 
 {
 	position: absolute;
 	top:0;
-	min-width: 1200px;
     height: 100%;
     width: 100%;
+    min-height: 880px;
+    min-width: 680px;
     background: #ffffff;
     color:#000000;
     font-family: "Arial", sans-serif;
@@ -51,8 +52,9 @@ li
 {
 	position: absolute;
 	height: 100%;
-	width: 100%;
-	min-height: 880px;
+	width: 90%;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 
 .header 
@@ -62,13 +64,17 @@ li
 	text-align: center;
 }
 
-.octopus
+.middle-element
 {
-	width: 90%;
-	min-width: 1100px;
 	left: 50%;
 	top:50%;
 	transform: translate(-50%,-50%);
+	min-height: 800px;
+}
+
+.octopus
+{
+	min-width: 600px;
 }
 
 .octopus__tentacles
@@ -104,10 +110,10 @@ li
 
 .octopus__head__eye
 {
-	height: 88px;
-	width: 88px;
-	top:25%;
-	left:45%;
+	height: 80px;
+	width: 80px;
+	top:20%;
+	left:20%;
 	border-radius: 50%;
 	background: #fff;
 }
@@ -141,17 +147,27 @@ li
 	width: 100%;
 	margin-top: 8px;
 	right: 0;
-	text-align: right;
 	background: #dddddd;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
   	border-top: 2px solid #cecece;
 }
 
+.octopus__tentacle__description
+{
+	position: relative;
+	display: block;
+	z-index: 99;
+	text-align: right;
+	padding-right: 4px;
+	right: 0;
+	height: 100%;
+}
+
 .octopus__tentacle_programming::before
 {
 	position: absolute;
-	content: "Программирование";
+	content: "";
 	width: 55%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -161,6 +177,7 @@ li
 	background: #e89076;
   	border-left: 3px solid #934b35;
   	border-bottom: 2px solid #934b35;
+  	z-index: 1;
 }
 
 .octopus__tentacle_programming::after
@@ -171,17 +188,18 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 55%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
   	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
+  	z-index: 2;
 }
 
 .octopus__tentacle_english::before
 {
 	position: absolute;
-	content: "Английский язык";
+	content: "";
 	width: 20%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -201,7 +219,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 20%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -211,7 +229,7 @@ li
 .octopus__tentacle_responsibility::before
 {
 	position: absolute;
-	content: "Ответственность";
+	content: "";
 	width: 65%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -231,7 +249,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 65%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -241,7 +259,7 @@ li
 .octopus__tentacle_perseverance::before
 {
 	position: absolute;
-	content: "Усидчивость";
+	content: "";
 	width: 70%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -261,7 +279,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 70%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -271,7 +289,7 @@ li
 .octopus__tentacle_learnability::before
 {
 	position: absolute;
-	content: "Обучаемость";
+	content: "";
 	width: 80%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -291,7 +309,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 80%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -301,7 +319,7 @@ li
 .octopus__tentacle_task::before
 {
 	position: absolute;
-	content: "Решение задач";
+	content: "";
 	width: 65%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -321,7 +339,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 65%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -331,7 +349,7 @@ li
 .octopus__tentacle_enterprise::before
 {
 	position: absolute;
-	content: "Предприимчивость";
+	content: "";
 	width: 30%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -351,7 +369,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 30%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -361,7 +379,7 @@ li
 .octopus__tentacle_stressresistance::before
 {
 	position: absolute;
-	content: "Стрессоустойчивость";
+	content: "";
 	width: 50%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -381,7 +399,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 50%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -391,7 +409,7 @@ li
 .octopus__tentacle_courage::before
 {
 	position: absolute;
-	content: "Смелость";
+	content: "";
 	width: 60%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -411,7 +429,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 60%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -421,7 +439,7 @@ li
 .octopus__tentacle_organization::before
 {
 	position: absolute;
-	content: "Организованность";
+	content: "";
 	width: 70%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -441,7 +459,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 70%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -451,7 +469,7 @@ li
 .octopus__tentacle_design::before
 {
 	position: absolute;
-	content: "Дизайн";
+	content: "";
 	width: 45%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -471,7 +489,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 45%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -481,7 +499,7 @@ li
 .octopus__tentacle_graphiceditors::before
 {
 	position: absolute;
-	content: "Владение графическими редакторами";
+	content: "";
 	width: 60%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -501,7 +519,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 60%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -511,7 +529,7 @@ li
 .octopus__tentacle_sociability::before
 {
 	position: absolute;
-	content: "Коммуникабельность";
+	content: "";
 	width: 55%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -531,7 +549,7 @@ li
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 55%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 30px;
 	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-left: 3px solid rgba(150, 112, 0, 0.5);
@@ -541,7 +559,7 @@ li
 .octopus__tentacle_curiosity::before
 {
 	position: absolute;
-	content: "Любопытство";
+	content: "";
 	width: 90%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -561,7 +579,7 @@ li
 	border-top-right-radius: 32px;
   	border-bottom-right-radius: 32px;
 	left: 10%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 32px;
 	background: linear-gradient(to right, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-right: 3px solid rgba(150, 112, 0, 0.5);
@@ -570,7 +588,7 @@ li
 .octopus__tentacle_laziness::before
 {
 	position: absolute;
-	content: "Лень";
+	content: "";
 	width: 65%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -590,7 +608,7 @@ li
 	border-top-right-radius: 32px;
   	border-bottom-right-radius: 32px;
 	left: 35%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 32px;
 	background: linear-gradient(to right, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-right: 3px solid rgba(150, 112, 0, 0.5);
@@ -599,7 +617,7 @@ li
 .octopus__tentacle_greed::before
 {
 	position: absolute;
-	content: "Жадность";
+	content: "";
 	width: 55%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
@@ -619,7 +637,7 @@ li
 	border-top-right-radius: 32px;
   	border-bottom-right-radius: 32px;
 	left: 45%;
-	transform: translate(3px,-2px);
+	transform: translate(3px,-32px);
 	height: 32px;
 	background: linear-gradient(to right, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
 	border-right: 3px solid rgba(150, 112, 0, 0.5);
