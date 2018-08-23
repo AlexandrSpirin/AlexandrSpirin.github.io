@@ -87,7 +87,19 @@ li
 	width: 20%;
   	height: 100%;
   	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
-	background: #000;
+	background: #e89076;
+	border-left: 3px solid #934b35;
+}
+
+.octopus__head::before
+{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+	transform: translate(0,-2px);
+  	border-bottom: 2px solid #934b35;
 }
 
 .octopus__head__eye
@@ -107,7 +119,7 @@ li
 	top:25%;
 	left: 45%;
 	border-radius: 50%;
-	background: #000;
+	background: #21201f;
 	animation: look 8s infinite alternate-reverse;
 }
 
@@ -123,265 +135,537 @@ li
 	100% {top:30%;left: 45%;}
 }
 
-.octopus__tentacle_if-need-more
+.octopus__tentacle_max
 {
-	height: 32px;
+	height: 30px;
 	width: 100%;
 	margin-top: 8px;
+	right: 0;
 	text-align: right;
-	background: #9b9b9b;
+	background: #dddddd;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
-}
-
-.octopus__tentacle_if-need-less
-{
-	height: 32px;
-	width: 100%;
-	margin-top: 8px;
-	text-align: right;
-	background: #000000;
-	border-top-left-radius: 32px;
-  	border-bottom-left-radius: 32px;
+  	border-top: 2px solid #cecece;
 }
 
 .octopus__tentacle_programming::before
 {
 	position: absolute;
 	content: "Программирование";
+	width: 55%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 65%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_programming::after
+{
+	position: absolute;
+	content: "";
+	width: 20%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 55%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_english::before
 {
 	position: absolute;
 	content: "Английский язык";
+	width: 20%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 25%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_english::after
+{
+	position: absolute;
+	content: "";
+	width: 30%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 20%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_responsibility::before
 {
 	position: absolute;
 	content: "Ответственность";
+	width: 65%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 70%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_responsibility::after
+{
+	position: absolute;
+	content: "";
+	width: 10%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 65%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_perseverance::before
 {
 	position: absolute;
 	content: "Усидчивость";
+	width: 70%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 90%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_perseverance::after
+{
+	position: absolute;
+	content: "";
+	width: 10%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 70%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_learnability::before
 {
 	position: absolute;
 	content: "Обучаемость";
+	width: 80%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 85%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_learnability::after
+{
+	position: absolute;
+	content: "";
+	width: 5%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 80%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_task::before
 {
 	position: absolute;
 	content: "Решение задач";
+	width: 65%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 80%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_task::after
+{
+	position: absolute;
+	content: "";
+	width: 15%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 65%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_enterprise::before
 {
 	position: absolute;
 	content: "Предприимчивость";
+	width: 30%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 35%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_enterprise::after
+{
+	position: absolute;
+	content: "";
+	width: 25%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 30%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_stressresistance::before
 {
 	position: absolute;
 	content: "Стрессоустойчивость";
+	width: 50%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 60%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_stressresistance::after
+{
+	position: absolute;
+	content: "";
+	width: 20%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 50%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_courage::before
 {
 	position: absolute;
 	content: "Смелость";
+	width: 60%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 75%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_courage::after
+{
+	position: absolute;
+	content: "";
+	width: 5%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 60%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_organization::before
 {
 	position: absolute;
 	content: "Организованность";
+	width: 70%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 70%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
 }
 
-.octopus__tentacle_curiosity::before
+.octopus__tentacle_organization::after
 {
 	position: absolute;
-	content: "Любопытство";
+	content: "";
+	width: 15%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
-	right: 0;
-	height: 32px;
-	width: 95%;
-	background: #000000;
+	right: 70%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_design::before
 {
 	position: absolute;
 	content: "Дизайн";
+	width: 45%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 50%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_design::after
+{
+	position: absolute;
+	content: "";
+	width: 25%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 45%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_graphiceditors::before
 {
 	position: absolute;
 	content: "Владение графическими редакторами";
+	width: 60%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 60%;
-	background: #000000;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_graphiceditors::after
+{
+	position: absolute;
+	content: "";
+	width: 15%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 60%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_sociability::before
 {
 	position: absolute;
 	content: "Коммуникабельность";
+	width: 55%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_sociability::after
+{
+	position: absolute;
+	content: "";
+	width: 25%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 55%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: linear-gradient(to left, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
+}
+
+.octopus__tentacle_curiosity::before
+{
+	position: absolute;
+	content: "Любопытство";
+	width: 90%;
+	border-top-left-radius: 32px;
+  	border-bottom-left-radius: 32px;
+	right: 0;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_curiosity::after
+{
+	position: absolute;
+	content: "";
+	width: 10%;
+	border-top-right-radius: 32px;
+  	border-bottom-right-radius: 32px;
+	left: 10%;
+	transform: translate(3px,-2px);
 	height: 32px;
-	width: 65%;
-	background: #000000;
+	background: linear-gradient(to right, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-right: 3px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_laziness::before
 {
 	position: absolute;
 	content: "Лень";
+	width: 65%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_laziness::after
+{
+	position: absolute;
+	content: "";
+	width: 15%;
+	border-top-right-radius: 32px;
+  	border-bottom-right-radius: 32px;
+	left: 35%;
+	transform: translate(3px,-2px);
 	height: 32px;
-	width: 55%;
-	background-image: linear-gradient(to right, #9b9b9b, #000000);
+	background: linear-gradient(to right, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-right: 3px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_greed::before
 {
 	position: absolute;
 	content: "Жадность";
+	width: 55%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
+}
+
+.octopus__tentacle_greed::after
+{
+	position: absolute;
+	content: "";
+	width: 10%;
+	border-top-right-radius: 32px;
+  	border-bottom-right-radius: 32px;
+	left: 45%;
+	transform: translate(3px,-2px);
 	height: 32px;
-	width: 40%;
-	background-image: linear-gradient(to right, #9b9b9b, #000000);
+	background: linear-gradient(to right, rgba(255, 233, 168, 0) 0%, rgba(255, 233, 168, 1) 100%);
+	border-right: 3px solid rgba(150, 112, 0, 0.5);
 }
 
 .octopus__tentacle_new-need-more::before
 {
 	position: absolute;
 	content: "";
+	width: 5%;
 	border-top-left-radius: 32px;
   	border-bottom-left-radius: 32px;
 	right: 0;
-	height: 32px;
-	width: 5%;
-	background: #000000;
-}
-
-.octopus__tentacle_new-need-less::before
-{
-	position: absolute;
-	content: "";
-	border-top-left-radius: 32px;
-  	border-bottom-left-radius: 32px;
-  	background-image: linear-gradient(to right, #9b9b9b, #000000);
-  	right: 0;
-	height: 32px;
-	width: 5%;
+	transform: translate(3px,-2px);
+	height: 30px;
+	background: #e89076;
+  	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
 }
 
 .tips_tentacle-need
 {
 	position: absolute;
 	left: 50%;
-	transform: translate(-450px,0);
-	width: 400px;
-	height: 32px;
+	transform: translate(-250px,-2px);
+	width: 194px;
+	height: 30px;
 	top: 66px;
 	border-radius: 32px;
-	background:#9b9b9b;
+	background: linear-gradient(to left, rgba(255, 233, 168, 1) 0%, rgba(255, 233, 168, 0) 50%, rgba(255, 233, 168, 1) 100%);
+	border-left: 3px solid rgba(150, 112, 0, 0.5);
+	border-right: 3px solid rgba(150, 112, 0, 0.5);
+  	border-bottom: 2px solid rgba(150, 112, 0, 0.5);
 }
 
 .tips_tentacle-current
 {
 	position: absolute;
 	right: 50%;
-	transform: translate(450px,0);
-	width: 400px;
+	transform: translate(250px,0);
+	width: 200px;
 	height: 32px;
 	top: 66px;
 	border-radius: 32px;
-	background:#000000;
+	background:#e89076;
+	border-left: 3px solid #934b35;
+  	border-bottom: 2px solid #934b35;
 }
 
