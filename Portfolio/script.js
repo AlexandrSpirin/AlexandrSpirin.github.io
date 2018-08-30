@@ -2,7 +2,6 @@ var $headerButtonAboutMe =$(".header__button_about-me")
 
 $headerButtonAboutMe.on("click", function(){
 	$("html, body").animate({scrollTop: 0}, 800)
-	offset:112;
 })
 
 
@@ -47,5 +46,5 @@ $headerButtonContacts.on("click", function(){
 		$("#education").height()+
 		$("#skills").height()+
 		$("#experience").height()+
-		$("#projects").height()}+138, 400)
+		$("#projects").height()+138}, 400)
 })
